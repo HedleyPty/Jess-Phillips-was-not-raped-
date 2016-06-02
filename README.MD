@@ -24,7 +24,11 @@ In order to install the latest stable version of *twitteR*, you need to run R an
 
 #twitteR credentials
 
-First you need to have..
+First you need to have a twitter developer account at https://dev.twitter.com
+
+Then you need to go to https://apps.twitter.com
+
+There you need to create an !(application)[https://themepacific-rajendranc.netdna-ssl.com/wp-content/uploads/Create-Twitter-API-Key.jpg]
 
 
 
