@@ -28,10 +28,47 @@ First you need to have a twitter developer account at https://dev.twitter.com
 
 Then you need to go to https://apps.twitter.com
 
-There you need to create an application
+There you need to create an application and accept the conditions (revealing the truth is not a violation of conditions)
 
 ![application](https://themepacific-rajendranc.netdna-ssl.com/wp-content/uploads/Create-Twitter-API-Key.jpg)
 
+After you create it, you need to create a token
+![application](http://s33.postimg.org/mic9cysr3/keys.png)
+
+![application](http://s33.postimg.org/lska94dfz/token.png)
+
+
+#Feeding credentials in the twitter.R file
+Copy the information I have censored in red and feed the setup_twitter_oath function with these 4 arguments in order
+
+![application](http://s33.postimg.org/j8p3ye6tr/Data_for_twitte_R.png)
+
+
+A sample from the twitter.R file:
+
+    if(!('twitteR' %in% installed.packages())){
+          install.packages('twitteR')
+    }
+
+
+    library(twitteR)
+    Consumer_key        <- "Data from your own application (see image above)"
+    Consumer_key_secret <- "Data from your own application (see image above)"
+    Access_token        <- "Data from your own application (see image above)"
+    Access_token_secret <- "Data from your own application (see image above)"
+
+
+    setup_twitter_oauth(
+       Consumer_key,
+       Consumer_key_secret,
+       Access_token,
+       Access_token_secret)
+
+#Using twitter
+Open R and load the file and answer either "Yes" or "No" (it doesn't matter)
+source("twitter.R")
+
+wasnt.Raped <- searchtwitter('@jessphillips+rape', n=6000)
 
 
 
