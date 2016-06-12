@@ -66,9 +66,12 @@ A sample from the twitter.R file:
 
 #Using twitter
 Open R and load the file and answer either "Yes" or "No" (it doesn't matter)
-source("twitter.R")
 
-wasnt.Raped <- searchtwitter('@jessphillips+rape', n=6000)
+    source("twitter.R")
+
+Then search her hashtag and the word rape, how may rape threats will you get?
+
+    wasnt.Raped <- searchtwitter('@jessphillips+rape', n=6000)
 
 
 
